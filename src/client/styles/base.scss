@@ -1,0 +1,33 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  
+}
+
+main {
+  flex: 2;
+  background-color:rgb(166, 203, 207);
+}
+
+section {
+  margin: 60px auto;
+
+}
+.container-title {
+  //margin: 20px;
+  background-color:rgb(166, 203, 207);
+  margin-bottom: 10px;
+}
+
+.container{
+  flex-wrap: wrap;
+  text-align: center;
+  margin: auto;
+  background-color:rgb(166, 203, 207);
+  height: 700px;
+}
+.result-box {
+  height: 100%;
+  width:100%;
+}

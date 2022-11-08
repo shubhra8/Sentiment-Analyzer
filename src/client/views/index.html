@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Sentiment Analyzer</title>
+   
+    <!-- <link href="/styles/footer.css" />-->
+  </head>
+
+  <body>
+    <header>
+      <img class="img1" src="https://i1.wp.com/thedatascientist.com/wp-content/uploads/2018/10/sentiment-analysis.png">
+    </header>
+    <main>
+      <div class="container">
+        
+
+      
+        <section>
+          
+          <form id="form">
+            <p class="container-title">
+              Enter the URL of an article of your choice.
+             </p>
+            <label for="article-url">Your URL</label>
+            <input
+              id="article-url"
+              type="text"
+              name="input"
+              value=""
+              placeholder="Enter Article URL"
+            />
+            <input
+              type="submit"
+              value="submit"
+              name=""
+              onclick="return Client.handleSubmit(event)"
+              onsubmit="return handleSubmit(event)"
+            />
+          </form>
+        </section>
+
+        <section class="result-box">
+          <strong>Form Results:</strong>
+          <div class="results"></div>
+        </section>
+      </div>
+    </main>
+    <footer>
+    
+    </footer>
+    <script>
+      // Check that service workers are supported
+      if ("serviceWorker" in navigator) {
+        // Use the window load event to keep the page load performant
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("/service-worker.js");
+        });
+      }
+    </script>
+  </body>
+</html>
