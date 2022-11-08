@@ -11,6 +11,7 @@ const cors = require('cors');
 
 // Require the Aylien npm package
 const API_KEY = process.env.API_KEY;
+const PORT = process.env.PORT || 3001;
 var aylien = require("aylien_textapi");
 var textapi = new aylien({
     application_key: process.env.API_KEY
@@ -53,8 +54,8 @@ app.get('/', function (req, res) {
 })
 
 // designates what port the app will listen to for incoming requests
-app.listen(8000, function () {
-    console.log('Example app listening on port 8000!')
+app.listen(PORT, function () {
+    console.log('Example app listening on port !')
 })
 
 app.get('/test', function (req, res) {
