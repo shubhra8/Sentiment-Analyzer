@@ -1,6 +1,9 @@
 {
   "name": "example-project",
   "version": "1.0.0",
+    "engines": {
+    "node": "v14.18.1"
+  }
   "main": "index.js",
   "scripts": {
     "test": "jest",
