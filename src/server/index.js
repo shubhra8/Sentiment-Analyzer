@@ -4,6 +4,7 @@ const mockAPIResponse = require('./mockAPI.js')
 const bodyParser = require('body-parser')
 const fetch = require('node-fetch');
 const dotenv = require('dotenv');
+const path = require('path');
 dotenv.config();
 
 // Cors allows the browser and server to communicate without any security interruptions
@@ -48,9 +49,9 @@ const Data = await response.json()
 
 app.get('/', function (req, res) {
    // res.sendFile("dist/index.html")
-    res.sendFile("C:/evaluate-news-nlp/dist/index.html");
+   // res.sendFile("C:/evaluate-news-nlp/dist/index.html");
    // res.sendFile('index.html', { root: 'C:/evaluate-news-nlp/dist' })
-    
+    res.sendFile(path.join(__dirname, '../evaluate-news-nlp/dist/index.html'));
 })
 
 // designates what port the app will listen to for incoming requests
