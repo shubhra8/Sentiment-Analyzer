@@ -4,7 +4,7 @@ const mockAPIResponse = require('./mockAPI.js')
 const bodyParser = require('body-parser')
 const fetch = require('node-fetch');
 const dotenv = require('dotenv');
-const path = require('path');
+
 dotenv.config();
 
 // Cors allows the browser and server to communicate without any security interruptions
