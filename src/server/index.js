@@ -51,7 +51,7 @@ app.get('/', function (req, res) {
    // res.sendFile("dist/index.html")
    // res.sendFile("C:/evaluate-news-nlp/dist/index.html");
    // res.sendFile('index.html', { root: 'C:/evaluate-news-nlp/dist' })
-    res.sendFile(path.join(__dirname, '../evaluate-news-nlp/dist/index.html'));
+    res.sendFile(path.join(__dirname, 'index.html'));
 })
 
 // designates what port the app will listen to for incoming requests
