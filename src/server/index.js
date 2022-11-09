@@ -26,9 +26,9 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json());
 
-app.use(express.static('dist'))
+//app.use(express.static('dist'))
 
-console.log(__dirname)
+//console.log(__dirname)
 
 // API
 const apiUrl = 'https://api.meaningcloud.com/sentiment-2.1?'
@@ -51,7 +51,7 @@ app.get('/', function (req, res) {
    // res.sendFile("dist/index.html")
    // res.sendFile("C:/evaluate-news-nlp/dist/index.html");
    // res.sendFile('index.html', { root: 'C:/evaluate-news-nlp/dist' })
-    res.sendFile(path.join(__dirname, '/index.html'));
+    res.sendFile('/evaluate-news-nlp/dist/index.html'));
 })
 
 // designates what port the app will listen to for incoming requests
