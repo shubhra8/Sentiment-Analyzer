@@ -26,7 +26,7 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json());
 
-app.use(express.static('./dist'))
+
 
 console.log(__dirname)
 
@@ -63,3 +63,4 @@ app.listen(PORT, function () {
 app.get('/test', function (req, res) {
     res.send(mockAPIResponse)
 })
+app.use(express.static('./dist'));
