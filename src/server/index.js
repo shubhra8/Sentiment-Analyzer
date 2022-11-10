@@ -48,7 +48,7 @@ const Data = await response.json()
 })
 
 app.get('/', function (req, res) {
-    res.sendFile(path.join(__dirname, '../../index.html'));
+    res.sendFile(path.join(__dirname, '../../../index.html'));
    //res.sendFile("index.html", { root: '/' })
     //res.sendFile("./index.html");
     //res.sendFile('index.html', { root: '/dist' })
