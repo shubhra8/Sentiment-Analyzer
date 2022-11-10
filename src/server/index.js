@@ -28,7 +28,7 @@ app.use(bodyParser.json());
 
 
 
-console.log(__dirname)
+//console.log(__dirname)
 
 // API
 const apiUrl = 'https://api.meaningcloud.com/sentiment-2.1?'
@@ -36,7 +36,7 @@ const apiKey = '3bf108b2e5c3a41b6e54c55d5fdfd432'
 //console.log(`Your API Key is ${process.env.API_KEY}`);
 let userurl = [] // const does not work
 
-console.log(__dirname)
+//console.log(__dirname)
 
 app.post('/addData', async function (req , res)  {
 userurl = req.body.url;
@@ -49,7 +49,7 @@ const Data = await response.json()
 
 app.get('/', function (req, res) {
     //res.sendFile(path.join(__dirname, '../../dist/index.html'));
-   res.sendFile("index.html", { root: '../../../EVALUATE-NEWS-NLP/dist' })
+   res.sendFile("index.html", { root: '../../dist' })
     //res.sendFile("./index.html");
     //res.sendFile('index.html', { root: '/dist' })
     //res.sendFile('evaluate-news-nlp/dist/index.html');
@@ -63,4 +63,4 @@ app.listen(PORT, function () {
 app.get('/test', function (req, res) {
     res.send(mockAPIResponse)
 })
-app.use(express.static('./dist'));
+//app.use(express.static('./dist'));
