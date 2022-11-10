@@ -48,8 +48,8 @@ const Data = await response.json()
 })
 
 app.get('/', function (req, res) {
-    //res.sendFile(path.join(__dirname, '../../dist/index.html'));
-   res.sendFile("index.html", { root: '../../dist' })
+    res.sendFile(path.join(__dirname, 'dist/index.html'));
+   //res.sendFile("index.html", { root: '../../dist' })
     //res.sendFile("./index.html");
     //res.sendFile('index.html', { root: '/dist' })
     //res.sendFile('evaluate-news-nlp/dist/index.html');
