@@ -57,9 +57,9 @@ app.get('/', function (req, res) {
     //res.sendFile("dist/index.html");
 })
 
-if (process.env.NODE_ENV === 'production') {
-   res.sendFile("index.html", { root: '/app/src/client/views' })
-}
+//if (process.env.NODE_ENV === 'production') {
+  // res.sendFile("index.html", { root: '/app/src/client/views' })
+//}
 
 // designates what port the app will listen to for incoming requests
 app.listen(PORT, function () {
