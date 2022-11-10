@@ -49,14 +49,14 @@ const Data = await response.json()
 
 app.get('/', function (req, res) {
    // app.use(express.static(path.join(__dirname, 'dist/index.html')));
-   res.sendFile("index.html", { root: '../dist' })
+   res.sendFile("index.html", { root: '/dist' })
     //res.sendFile("./index.html");
     //res.sendFile('index.html', { root: '/dist' })
     //res.sendFile('evaluate-news-nlp/dist/index.html');
 })
 
 if (process.env.NODE_ENV === 'production') {
-  res.sendFile("index.html", { root: '../dist' })
+  res.sendFile("index.html", { root: '/dist' })
 }
 
 // designates what port the app will listen to for incoming requests
