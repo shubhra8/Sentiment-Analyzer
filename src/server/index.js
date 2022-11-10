@@ -50,7 +50,7 @@ const Data = await response.json()
 app.get('/', function (req, res) {
     //res.sendFile("dist/index.html")
     //res.sendFile("../evaluate-news-nlp/dist/index.html");
-    res.sendFile('index.html', { root: '/evaluate-news-nlp/dist' })
+    res.sendFile('index.html', { root: '/dist' })
     //res.sendFile('evaluate-news-nlp/dist/index.html');
 })
 
