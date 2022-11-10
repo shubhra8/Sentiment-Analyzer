@@ -28,7 +28,7 @@ app.use(bodyParser.json());
 
 
 
-//console.log(__dirname)
+console.log(__dirname)
 
 // API
 const apiUrl = 'https://api.meaningcloud.com/sentiment-2.1?'
@@ -48,7 +48,7 @@ const Data = await response.json()
 })
 
 app.get('/', function (req, res) {
-    app.use(express.static(path.join(__dirname, '../dist/index.html')));
+    app.use(express.static(path.join(__dirname, 'dist/index.html')));
    //res.sendFile("index.html", { root: '../../dist' })
     //res.sendFile("./index.html");
     //res.sendFile('index.html', { root: '/dist' })
@@ -56,7 +56,7 @@ app.get('/', function (req, res) {
 })
 
 if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, '../dist/index.html')));
+  app.use(express.static(path.join(__dirname, 'dist/index.html')));
 }
 
 // designates what port the app will listen to for incoming requests
