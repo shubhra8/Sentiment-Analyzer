@@ -55,9 +55,9 @@ app.get('/', function (req, res) {
     //res.sendFile('evaluate-news-nlp/dist/index.html');
 })
 
-if (process.env.NODE_ENV === 'production') {
-  res.sendFile("index.html", { root: '/dist' })
-}
+//if (process.env.NODE_ENV === 'production') {
+  //res.sendFile("index.html", { root: '/dist' })
+//}
 
 // designates what port the app will listen to for incoming requests
 app.listen(PORT, function () {
