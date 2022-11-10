@@ -55,6 +55,10 @@ app.get('/', function (req, res) {
     //res.sendFile('evaluate-news-nlp/dist/index.html');
 })
 
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static(path.join(__dirname, '../../dist/index.html')));
+}
+
 // designates what port the app will listen to for incoming requests
 app.listen(PORT, function () {
     console.log('Example app listening on port !')
