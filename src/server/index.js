@@ -56,7 +56,7 @@ app.get('/', function (req, res) {
 })
 
 if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, 'dist/index.html')));
+  res.sendFile("index.html", { root: '../dist' })
 }
 
 // designates what port the app will listen to for incoming requests
